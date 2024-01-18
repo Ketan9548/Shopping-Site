@@ -1,0 +1,27 @@
+{
+    "version":2,
+    "builds":[
+        {
+            "scr":"ec/wsgi.py",
+            "use":"@vercel/pyhton",
+            "config":{ "maxLambdaSize": "15mb", "runtime":"pyhton3.9"}
+        },
+        {
+            "scr":"build_file.sh",
+            "use":"@vercel/static-build",
+            "config":{
+                "distDir":"staticfiles_build"
+            }
+        }
+    ],
+    "routes":[
+        {
+            "scr":"/static/(.*)",
+            "dest":"/static/$1"
+        },
+        {
+            "scr":"/(.*)",
+            "dest":"ec/wsgi.py"
+        }
+    ]
+}

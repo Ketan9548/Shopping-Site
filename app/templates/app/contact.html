@@ -1,0 +1,60 @@
+{% extends 'app/base.html' %} 
+{% load static %} 
+{% block title %}Category{% endblock title %} 
+{% block banner-slider %}
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'App/images/banner/imge1.jpg' %}"
+        class="d-block w-100"
+        alt="banner_imge"
+        height="430"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'App/images/banner/imge2.jpg' %}"
+        class="d-block w-100"
+        alt="banner_imge"
+        height="430"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'App/images/banner/imge3.jpg' %}"
+        class="d-block w-100"
+        alt="banner_imge"
+        height="430"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'App/images/banner/imge4.jpg' %}"
+        class="d-block w-100"
+        alt="banner_imge"
+        height="430"
+      />
+    </div>
+  </div>
+</div>
+{% endblock banner-slider %} 
+<br><br>
+{% block main-content %}
+<div>
+    <br>
+    <h2 class="text-center">Contact Us</h2>
+    <br>
+    <div>
+        <p class="fs-4 text-center">Address: <a href="https://www.google.com/maps/place/Accher,+Pi+I+%26+II,+Greater+Noida,+Uttar+Pradesh+201310/@28.4655807,77.5219329,15z/data=!3m1!4b1!4m6!3m5!1s0x390cc01f470d4b15:0xce249ff5d5c3c20c!8m2!3d28.4665398!4d77.5411625!16s%2Fg%2F1tg4jrvq?entry=ttu">Click here</a></p>
+        <p class="fs-4 text-center">Contact: 9548XXXXX</p>
+        <p class="fs-4 text-center">Email: ketanname@gmail.com</p>
+        <p class="fs-4 text-center">LinkDin: <a href="www.linkedin.com/in/ketan-chauhan-82056021a">linkdin</a></p>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}
